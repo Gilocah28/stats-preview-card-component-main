@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+
+:root{
+  --backgroundcolor: hsl(233, 47%, 7%);
+  --darkblue: hsl(244, 38%, 16%);
+  --softviolet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --colorparagraph: hsla(0, 0%, 100%, 0.75);
+  --statcolor: hsla(0, 0%, 100%, 0.6);
+  --inter: 'Inter', sans-serif;
+  --lexend:'Lexend Deca', sans-serif; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--inter),var(--lexend);
+  color: var(--white);
+}
+body{
+  background: var(--backgroundcolor);
+}
+.container{
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper{
+  background: var(--softviolet);
+}
+
+.wrapper:nth-child(1){
+  border-radius: 10px 10px 0px 0px;
+}
+picture img{
+  width: 100%;
+  height: 100%;
+}
+
+.imgacolor{
+  mix-blend-mode: multiply;
+}
+
+.wrapper:nth-child(2){
+  text-align: center;  
+  background: var(--darkblue);
+  border-radius: 0px 0px 10px 10px ;
+}
+
+.text {
+  margin-top: 3rem;
+  padding: 0rem 2rem;
+}
+
+.text > h2 {
+  font-family: var(--inter);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.text h2 span {
+  color: var(--softviolet);
+}
+
+.text > p {
+  margin-top: 1.5rem;
+  font-family: var(--lexend);
+  color: var(--colorparagraph);
+  font-size: 17px;
+  line-height: 1.8rem;
+}
+
+.rate{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 71.875rem) {
+  .wrapper:nth-child(1) {
+    border-radius: 0px 10px 10px 0px;
+  }
+  .wrapper:nth-child(2) {
+    border-radius: 10px 0px 0px 10px;
+  }
+}
+
+@media screen and (min-width: 71.25rem) {
+  body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  .container {
+    padding: 5rem 2rem;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  }
+  .rate {
+    flex-direction: row;
+    padding-left: 2rem;
+    margin-top: 6rem;
+  }
+  .wrapper:nth-child(1) {
+    border-radius: 0px 10px 10px 0px;
+    flex-basis: 35rem;
+    height: 450px;
+  }
+  .wrapper:nth-child(2) {
+    text-align: left;
+    background: var(--darkblue);
+    border-radius: 10px 0px 0px 10px;
+    flex-basis: 35rem;
+    height: 450px;
+    padding: 0rem 3rem;
+  }
+}
+
+
+
+
